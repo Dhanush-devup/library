@@ -15,30 +15,58 @@
                 You can also view the <a href="https://github.com/Dhanush-devup/library">Github repository</a> of this project.</p>
         </div>
         <div class="form">
-            <form id="book">
-                <div class="form-group text">
-                    <label for="title">Book name:</label>
-                    <input type="text" id="title" name="title" placeholder="Atomic Habits">
-                </div>
-                <div class="form-group text">
-                    <label for="author">Author name:</label>
-                    <input type="text" id="author" name="author" placeholder="Author name"> 
-                </div>
-                <div class="form-group num">
-                    <label for="pages">Pages:</label>
-                    <input type="number" id="pages" name="pages" placeholder="300">
-                </div>
-                <div class="form-group stat">
-                    <label for="options">Status:</label>
-                    <select id="options" name="status" >
-                        <option value="read">READ</option>
-                        <option value="not_read">NOT READ</option>
-                    </select>
-                </div>
-                <div class="form-group btt">
-                    <input type="submit" name="submit" >
-                </div>
-            </form>
+<form id="book">
+    <div class="form-group text">
+        <label for="title">Book name:</label>
+        <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Atomic Habits"
+            required
+            minlength="2"
+            maxlength="100"
+        >
+    </div>
+
+    <div class="form-group text">
+        <label for="author">Author name:</label>
+        <input
+            type="text"
+            id="author"
+            name="author"
+            placeholder="Author name"
+            required
+            minlength="2"
+            maxlength="60"
+        >
+    </div>
+
+    <div class="form-group num">
+        <label for="pages">Pages:</label>
+        <input
+            type="number"
+            id="pages"
+            name="pages"
+            placeholder="300"
+            required
+            min="1"
+            max="10000"
+        >
+    </div>
+
+    <div class="form-group stat">
+        <label for="options">Status:</label>
+        <select id="options" name="status" required>
+            <option value="read">READ</option>
+            <option value="not_read">NOT READ</option>
+        </select>
+    </div>
+
+    <div class="form-group btt">
+        <input type="submit" value="Submit">
+    </div>
+</form>
         </div>
         <div class="table">
             <table>
