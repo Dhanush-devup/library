@@ -1,3 +1,14 @@
+class Book{
+    constructor(title,author,pages,status){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.status = (status=="read")? true : false ;
+    this.uid = crypto.randomUUID();
+    }
+}
+
+
 let books = [
     new Book(
         "The Hobbit",
@@ -18,16 +29,7 @@ const table = document.querySelector('#table_body');
 
 
 
-function Book(title,author,pages,status){
-    if (!new.target){
-        throw "error for calling the constuctor without the new";
-    }
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.status = (status=="read")? true : false ;
-    this.uid = crypto.randomUUID();
-}
+
 
 
 function display(){
